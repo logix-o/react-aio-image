@@ -1,0 +1,78 @@
+.aio-image__root {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.aio-image__placeholder {
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
+
+.aio-image__placeholder--faded {
+    opacity: 0;
+}
+
+.aio-image__native-img {
+    position: relative;
+    display: block;
+}
+
+.aio-image__absolute-fill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*=========image visual mode=========*/
+
+/* TODO: use diplay flex instead of transform */
+.aio-image__mode-height-fit {
+    width: auto;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* TODO: use diplay flex instead of transform */
+.aio-image__mode-width-fit {
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.aio-image__mode-scale-fill {
+    width: 100%;
+    height: 100%;
+}
+
+.aio-image__mode-auto-height {
+    width: 100%;
+    height: auto;
+}
+
+/*=========default loading animation=========*/
+
+.aio-image__skeleton {
+    background-image: linear-gradient(90deg, rgb(242, 242, 242) 25%, rgb(230, 230, 230) 37%, rgb(242, 242, 242) 63%);
+    background-size: 400% 100%;
+    animation-name: aio-image__skeleton-anim;
+    animation-timing-function: ease;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aio-image__skeleton-anim {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

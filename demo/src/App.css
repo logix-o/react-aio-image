@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 21px;
+}
+
+.gap {
+  margin-bottom: 21px;
+}
