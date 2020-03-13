@@ -10,9 +10,7 @@
 
 ### todo
 
-+ [x] 使用英文注释
-+ [ ] 不再使用react-iconfont-cli维护图标文件
-  + [ ] 支持打包svg文件
++ [ ] 支持打包svg文件
 + [ ] 换一种形式的图片占位组件
 + [ ] 支持图片预览
   + [ ] pc端鼠标显示放大镜
@@ -24,8 +22,12 @@
 
 ### 安装
 
-+ 使用`react-hooks`进行开发，务必安装`react@16.8.0+`
-+ 若要兼容IE浏览器，请自行安装[polyfill]('https://github.com/w3c/IntersectionObserver/tree/master/polyfill')
+``` bash
+yarn add react-aio-image
+```
+
++ 务必安装`react@16.8.0+`
++ 若要兼容IE浏览器，请安装[polyfill]('https://github.com/w3c/IntersectionObserver/tree/master/polyfill')
 
 ### 使用
 
