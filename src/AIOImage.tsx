@@ -141,7 +141,7 @@ const AIOImage = memo<AIOImageProps>(props => {
 
     return (
         <div
-            ref={setRootRef}
+            ref={setRootRef as any}
             style={visualSize}
             className={rootClassname}
             onClick={onClickOrPreview}

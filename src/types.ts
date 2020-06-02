@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactEventHandler } from "react"
+import { MouseEventHandler, ReactEventHandler, ReactNode } from "react"
 
 export type AIOImageVisualMode = 'width-fit' | 'height-fit' | 'scale-fill' | 'auto-height'
 
@@ -86,6 +86,8 @@ interface AIOImageOptions {
     enablePreview?: boolean
 
     onClick?: AIOImageClickHandler,
+
+    children?: ReactNode
 }
 
 export type AIOImageProps =

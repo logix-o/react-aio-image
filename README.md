@@ -45,10 +45,13 @@ yarn dev
 yarn demo
 ```
 
-### 打包
+### 打包并发布
+
+> 记得先修改版本号
 
 ``` bash
 yarn build
+npm publish
 ```
 
 ## 参考文档
