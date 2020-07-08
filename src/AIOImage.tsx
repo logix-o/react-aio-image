@@ -6,7 +6,6 @@ import {
     AIOImageVisualMode,
     AIOImageLoadHandler
 } from "./types"
-import useToggle from "./utils/useToggle"
 import useViewObserver from "./utils/useViewObserver"
 import ImageBase from "./Photo"
 import { mergeClassname } from "./utils"
@@ -33,10 +32,7 @@ const AIOImage = memo<AIOImageProps>(props => {
         renderPlaceholder = renderDefaultPlaceholder,
     } = props
 
-    const {
-        value: loading,
-        toggle: toggleLoading
-    } = useToggle(true)
+    const [loading, setLoading] = useState(true)   // default is loading
 
     const enableAutoHeight = useMemo<boolean>(
         () => mode === 'auto-height' || height === 'auto',
@@ -95,10 +91,10 @@ const AIOImage = memo<AIOImageProps>(props => {
             // avaid img show in a flash
             if ('requestAnimationFrame' in window) {
                 requestAnimationFrame(() => {
-                    toggleLoading()
+                    setLoading(false)
                 })
             } else {
-                toggleLoading()
+                setLoading(false)
             }
         },
         // eslint-disable-next-line

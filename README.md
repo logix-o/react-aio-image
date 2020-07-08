@@ -52,6 +52,8 @@ yarn demo
 ``` bash
 yarn build
 npm publish
+// 若使用淘宝镜像
+npm publish --registry http://registry.npmjs.org
 ```
 
 ## 参考文档
